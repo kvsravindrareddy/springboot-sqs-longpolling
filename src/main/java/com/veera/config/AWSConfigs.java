@@ -1,0 +1,33 @@
+package com.veera.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix = "aws.sqs")
+public class AWSConfigs {
+	private String accessKey;
+	private String secretKey;
+	private String empQueueUrl;
+	
+	public String getAccessKey() {
+		return accessKey;
+	}
+	public void setAccessKey(String accessKey) {
+		this.accessKey = accessKey;
+	}
+	public String getSecretKey() {
+		return secretKey;
+	}
+	public void setSecretKey(String secretKey) {
+		this.secretKey = secretKey;
+	}
+	public String getEmpQueueUrl() {
+		return empQueueUrl;
+	}
+	public void setEmpQueueUrl(String empQueueUrl) {
+		this.empQueueUrl = empQueueUrl;
+	}
+
+	
+}
